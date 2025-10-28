@@ -1,26 +1,12 @@
 import ModeToggle from "@/components/ui/mode-toggle";
+import { Pattern } from "@/components/ui";
 import { libraries } from "@/constants/data";
 import { Github, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen w-full bg-background relative">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `
-        linear-gradient(to right, var(--foreground) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--foreground) 1px, transparent 1px)
-      `,
-            backgroundSize: "20px 30px",
-            WebkitMaskImage:
-              "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
-            maskImage:
-              "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
-          }}
-        />
-
+      <Pattern>
         <div className="h-[100dvh] relative z-10 center flex-col gap-10 text-center layout">
           <div className="center gap-2">
             <a
@@ -55,7 +41,7 @@ export default function Home() {
           </ul>
           <ModeToggle />
         </div>
-      </div>
+      </Pattern>
     </>
   );
 }
