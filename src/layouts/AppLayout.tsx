@@ -1,6 +1,11 @@
+import { ReactNode } from "react";
 import { BottomTabs } from "@/components/ui";
 
-export default function AppLayout({ children }) {
+interface AppLayoutProps {
+  children: ReactNode;
+}
+
+export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <div className="min-h-[100dvh] bg-background relative">
 
