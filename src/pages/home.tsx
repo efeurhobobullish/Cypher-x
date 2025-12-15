@@ -1,14 +1,15 @@
-import ModeToggle from "@/components/ui/mode-toggle";
-import { Pattern } from "@/components/ui";
+import AppLayout from "@/layouts/AppLayout";
+import { ModeToggle } from "@/components/ui";
 import { Github, Rocket } from "lucide-react";
 
 export default function Home() {
   return (
-    <Pattern>
-      <main className="min-h-[100dvh] relative z-10 flex items-center justify-center layout">
+    <AppLayout>
+      <div className="min-h-[100dvh] relative z-10 flex items-center justify-center">
+
         <div className="max-w-2xl w-full text-center space-y-8">
 
-          {/* Top Actions */}
+          {/* Top actions */}
           <div className="flex justify-center gap-3">
             <a
               href="https://github.com/your-username/cypher-x-bot"
@@ -30,8 +31,7 @@ export default function Home() {
             </h1>
 
             <p className="text-muted text-base md:text-lg">
-              A powerful, automated bot built for speed, reliability, and
-              seamless deployment.
+              A powerful, automated bot built for speed, reliability, and seamless deployment.
             </p>
           </div>
 
@@ -52,7 +52,8 @@ export default function Home() {
           </p>
 
         </div>
-      </main>
-    </Pattern>
+
+      </div>
+    </AppLayout>
   );
 }
