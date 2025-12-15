@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
 import { BottomTabs } from "@/components/ui";
+
+import type { ReactNode } from "react";
 
 interface AppLayoutProps {
   children: ReactNode;
