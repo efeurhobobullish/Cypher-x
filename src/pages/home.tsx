@@ -1,47 +1,58 @@
 import ModeToggle from "@/components/ui/mode-toggle";
 import { Pattern } from "@/components/ui";
-import { libraries } from "@/constants/data";
-import { Github, ArrowRight } from "lucide-react";
+import { Github, Rocket } from "lucide-react";
 
 export default function Home() {
   return (
-    <>
-      <Pattern>
-        <div className="h-[100dvh] relative z-10 center flex-col gap-10 text-center layout">
-          <div className="center gap-2">
+    <Pattern>
+      <main className="min-h-[100dvh] relative z-10 flex items-center justify-center layout">
+        <div className="max-w-2xl w-full text-center space-y-8">
+
+          {/* Top Actions */}
+          <div className="flex justify-center gap-3">
             <a
-              href="https://github.com/learnwithjacksun/my-react-template"
+              href="https://github.com/your-username/cypher-x-bot"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-line rounded-full bg-secondary/70 px-4 py-2 center gap-20 inline-flex "
+              className="inline-flex items-center gap-2 border border-line rounded-full px-4 py-2 text-sm bg-secondary/70 hover:bg-secondary transition"
             >
-              <div className="center gap-2">
-                <Github size={18} className="text-main/70" />
-                <p className="text-sm">Use Template</p>
-              </div>
-              <ArrowRight size={20} className="text-main/70" />
+              <Github size={16} />
+              View on GitHub
             </a>
-          </div>
-          <div className="space-y-2">
-            <h1 className="text-6xl md:leading-[80px] leading-[60px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-main to-main/70 dark:to-main/50">
-              My Reactjs Template
-            </h1>
-            <p className="text-muted text-sm">With typescript.</p>
+
+            <ModeToggle />
           </div>
 
-          <ul className="center flex-wrap gap-2">
-            {libraries.map((library) => (
-              <li
-                key={library}
-                className="text-sm text-muted dark:bg-secondary border border-line rounded-full px-4 py-2"
-              >
-                {library}
-              </li>
-            ))}
-          </ul>
-          <ModeToggle />
+          {/* Hero */}
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-main to-main/70">
+              Cypher X Bot
+            </h1>
+
+            <p className="text-muted text-base md:text-lg">
+              A powerful, automated bot built for speed, reliability, and
+              seamless deployment.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <div className="flex justify-center">
+            <a
+              href="/deploy"
+              className="inline-flex items-center gap-3 rounded-xl bg-main text-background px-6 py-3 font-medium hover:opacity-90 transition"
+            >
+              <Rocket size={18} />
+              Deploy Cypher X
+            </a>
+          </div>
+
+          {/* Footer hint */}
+          <p className="text-xs text-muted">
+            Built with modern tooling • Secure • Scalable
+          </p>
+
         </div>
-      </Pattern>
-    </>
+      </main>
+    </Pattern>
   );
 }
