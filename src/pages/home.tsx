@@ -1,5 +1,5 @@
 import AppLayout from "@/layouts/AppLayout";
-import  ModeToggle from "@/components/ui";
+import ModeToggle from "@/components/ui/mode-toggle";
 import { Github, Rocket } from "lucide-react";
 
 export default function Home() {
